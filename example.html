@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React App with TailwindCSS</title>
+    <!-- TailwindCSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="root" class="p-4"></div>
+    <!-- React and ReactDOM CDN -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <!-- Babel CDN -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script>
+    
+    <!-- External Component -->
+    <script type="text/babel">
+        const ExternalComponent = () => {
+            return (
+                <div className="p-4 bg-gray-100 rounded-lg shadow-md">
+                    <h2 className="text-2xl font-semibold text-green-500">External Component</h2>
+                    <p className="mt-2 text-gray-700">This is an external component.</p>
+                </div>
+            );
+        };
+    </script>
+
+    <!-- Main React App -->
+    <script type="text/babel">
+        const App = () => {
+            return (
+                <div className="text-center">
+                    <h1 className="text-4xl font-bold text-blue-500">Hello, React with TailwindCSS!</h1>
+                    <p className="mt-4 text-gray-600">This is a simple React app styled with TailwindCSS.</p>
+                    <ExternalComponent />
+                </div>
+            );
+        };
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
