@@ -1,9 +1,7 @@
-
-export default function Header({
-  children
-}) {
-  return <header className="bg-yellow-500 p-4">
-    <p className="text-xs">Header.jsx</p>
-    {children}
+export default function Header() {
+  return <header className="flex items-center justify-center pt-12">
+    <div className="w-20 h-20 overflow-hidden rounded-full">
+      <img src="./avatar.png" alt="john" />
+    </div>
   </header>
 }

@@ -1,27 +1,7 @@
-import { useState } from "react";
-import Header from "./components/Header";
-import Menu from "./components/Menu";
+import Hero from "./components/Hero";
 
 export default function App() {
-  const [backgroundColor, setBackgroundColor] = useState('bg-blue-500');
-  return (
-    <div>
-      <main className={`${backgroundColor} p-2`}>
-        <p className="text-xs">App.jsx</p>
-        <Header>
-          <Menu {...{
-            name: "Guillaume",
-            items: [
-              "Home",
-              "Profile",
-              "Notifications"
-            ],
-            emitData: (item) => alert(item)
-          }} />
-        </Header>
-      </main>
-    </div>
-  )
+  return <main className="w-full">
+    <Hero />
+  </main>;
 }
-
-
