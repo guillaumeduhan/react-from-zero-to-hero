@@ -1,12 +1,13 @@
 {
-  "name": "codewithg.com",
+  "name": "John Lemoine",
   "position": "Lead Developer",
   "description": "Hello, my name is John and I create stunning web applications since 15 years.",
+  "city": "Seattle, WA",
   "social": {
-    "x": "http://www.x.com/john",
+    "github": "http://www.github.com/john",
     "instagram": "http://www.instagram.com/john",
-    "youtube": "https://www.youtube.com/p/john",
     "linkedin": "https://www.linkedin.com/in/john",
     "tiktok": "https://tiktok.com/john"
-  }
+  },
+  "photos": [1, 2, 3]
 }

@@ -5,7 +5,7 @@ import Button from "./Button";
 const openUrl = (link) => window.open(link, "_blank");
 
 export default function Index() {
-  return <div className="flex flex-wrap items-center justify-center gap-2 mx-auto">
+  return <div className="flex flex-wrap items-center gap-2">
     {Object.entries(config.social)
       .map(([key, value]) => (
         <Button

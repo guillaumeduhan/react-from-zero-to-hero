@@ -3,7 +3,7 @@ export default function Button({
   children,
   onClick
 }) {
-  return <button className={`flex items-center justify-center px-5 py-1 rounded font-[500] text-white shadow curosr-pointer hover:scale-[105%] transition ${className}`} onClick={onClick}>
+  return <button className={`flex text-xs hover:bg-black hover:text-white border items-center justify-center px-2 py-1 rounded text-black cursor-pointer hover:scale-[105%] transition ${className}`} onClick={onClick}>
     {children}
   </button>;
 }

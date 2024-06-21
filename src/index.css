@@ -11,25 +11,3 @@ body {
 p {
   @apply font-light text-slate-400;
 }
-
-/* social */
-
-.x {
-  @apply bg-black;
-}
-
-.instagram {
-  @apply bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500;
-}
-
-.youtube {
-  @apply bg-red-500;
-}
-
-.linkedin {
-  @apply bg-blue-500;
-}
-
-.tiktok {
-  @apply bg-black;
-}
