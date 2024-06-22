@@ -5,6 +5,7 @@
 @tailwind utilities;
 
 body {
+  @apply text-black bg-white dark:bg-slate-900 dark:text-white;
   font-family: "Sora", sans-serif;
 }
 

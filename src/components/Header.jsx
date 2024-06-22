@@ -1,21 +1,12 @@
-import config from '../config.json';
+import useDarkMode from '../hooks/useDarkMode';
+import { DarkMode } from './DarkMode';
 
 export default function Header() {
-  const {
-    name,
-    position,
-    description,
-    city,
-  } = config;
-  return <header className="grid gap-2 pt-8">
-    <div className="w-20 h-20 overflow-hidden rounded-full">
-      <img src="./avatar.png" alt="john" />
-    </div>
-    <h1 className='font-[600] text-xl flex gap-1'>
-      <span>{name}</span>
-      <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><path fill="skyblue" d="m8.6 22.5l-1.9-3.2l-3.6-.8l.35-3.7L1 12l2.45-2.8l-.35-3.7l3.6-.8l1.9-3.2L12 2.95l3.4-1.45l1.9 3.2l3.6.8l-.35 3.7L23 12l-2.45 2.8l.35 3.7l-3.6.8l-1.9 3.2l-3.4-1.45zm2.35-6.95L16.6 9.9l-1.4-1.45l-4.25 4.25l-2.15-2.1L7.4 12z" /></svg>
-    </h1>
-    <p className='font-[500]'>{position}, {city}</p>
-    <p className='text-wrap'>{description}</p>
-  </header>
+  const [dark, setDark] = useDarkMode();
+
+  return (
+    <header className="flex items-center justify-end pt-4">
+      <DarkMode dark={dark} setDark={setDark} />
+    </header>
+  );
 }
