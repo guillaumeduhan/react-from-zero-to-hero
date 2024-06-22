@@ -6,17 +6,18 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import NotFound from "./components/NotFound";
 import "./index.css";
-import Post from "./routes/Post";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
-  }, {
-    path: "/:slug",
-    element: <Post />,
   },
+  {
+    path: "*",
+    element: <NotFound />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
