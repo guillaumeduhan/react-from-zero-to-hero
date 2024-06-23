@@ -1,5 +1,3 @@
-import Header from "@/components/Header";
-import Home from "@/routes/Home";
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import {
@@ -7,12 +5,20 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import NotFound from "./components/NotFound";
-import "./index.css";
+// import SatoshiLayout from "./layouts/Satoshi";
+import MainLayout from "./layouts/Main";
+import Home from "./routes/Home";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <MainLayout />,
+    children: [
+      {
+        path: "",
+        element: <Home />
+      }
+    ]
   },
   {
     path: "*",
@@ -22,9 +28,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <div className="w-full grid gap-4 px-4 w-full max-w-[1000px] mx-auto">
-      <Header />
-      <RouterProvider router={router} />
-    </div>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
