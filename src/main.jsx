@@ -6,7 +6,8 @@ import {
 } from "react-router-dom";
 import NotFound from "./components/NotFound";
 // import SatoshiLayout from "./layouts/Satoshi";
-import MainLayout from "./layouts/Main";
+import Secret from "./components/Secret";
+import MainLayout from "./layouts/Satoshi";
 import Home from "./routes/Home";
 
 const router = createBrowserRouter([
@@ -17,6 +18,9 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Home />
+      }, {
+        path: "secret",
+        element: <Secret />
       }
     ]
   },
