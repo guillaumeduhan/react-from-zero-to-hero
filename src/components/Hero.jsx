@@ -1,5 +1,5 @@
-import config from '../config.json';
-import Social from "./Social";
+import Social from "@/components/Social";
+import config from '@/config.json';
 
 export default function Hero() {
   const {

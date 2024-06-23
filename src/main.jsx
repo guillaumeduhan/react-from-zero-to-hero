@@ -4,14 +4,21 @@ import {
   RouterProvider,
   createBrowserRouter
 } from "react-router-dom";
-import './index.css';
-import Home from "./routes/Home";
-import Notfound from './routes/Notfound';
+// import SatoshiLayout from './layouts/SatoshiLayout';
+import MainLayout from '@/layouts/MainLayout';
+import Home from '@/routes/Home';
+import Notfound from '@/routes/Notfound';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <MainLayout />,
+    children: [
+      {
+        path: "",
+        element: <Home />
+      }
+    ]
   }, {
     path: "*",
     element: <Notfound />,

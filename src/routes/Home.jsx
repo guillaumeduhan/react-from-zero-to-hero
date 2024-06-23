@@ -1,7 +1,5 @@
-// import Hero from "../components/Hero";
 export default function Home() {
   return <main>
-    hello
-    {/* <Hero /> */}
+    <div>This is my main page</div>
   </main>;
 }
