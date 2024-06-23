@@ -7,25 +7,14 @@ import {
 import './index.css';
 import Home from "./routes/Home";
 import Notfound from './routes/Notfound';
-import Profile from './routes/Profile';
-import Settings from './routes/Settings';
 
 const router = createBrowserRouter([
   {
-    path: "*",
-    element: <Notfound />,
-  },
-  {
-    path: "/settings",
-    element: <Settings />,
-  },
-  {
-    path: "/profile",
-    element: <Profile />,
-  },
-  {
     path: "/",
     element: <Home />,
+  }, {
+    path: "*",
+    element: <Notfound />,
   },
 ]);
 

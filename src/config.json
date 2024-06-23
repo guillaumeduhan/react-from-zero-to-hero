@@ -1,0 +1,61 @@
+{
+  "name": "John Lemoine",
+  "position": "Lead Developer",
+  "verified": true,
+  "description": "Hello, my name is John and I create stunning web applications.",
+  "city": "Seattle, WA",
+  "social": [
+    {
+      "icon": "Github",
+      "url": ""
+    }, {
+      "icon": "Twitter",
+      "url": ""
+    }, {
+      "icon": "LinkedIn",
+      "url": ""
+    }, {
+      "icon": "Youtube",
+      "url": ""
+    }, {
+      "icon": "Instagram",
+      "url": ""
+    }, {
+      "icon": "Tiktok",
+      "url": ""
+    }
+  ],
+  "projects": [
+    {
+      "date": "Jan 2023",
+      "title": "Lemoine's Coffee",
+      "url": "https://google.com"
+    }, {
+      "date": "Dec 2021",
+      "title": "MyAwesomeApp.com",
+      "url": "https://google.com"
+    }, {
+      "date": "Sept 2019",
+      "title": "Discover Quebec",
+      "url": "https://google.com"
+    }
+  ],
+  "experience": [
+    {
+      "date": "2022 - Now",
+      "title": "Lead Developer",
+      "note": "Google",
+      "url": null
+    }, {
+      "date": "2020 - 2022",
+      "title": "Software Engineer",
+      "note": "LinkedIn",
+      "url": null
+    }, {
+      "date": "2019 - 2020",
+      "title": "Junior Software Engineer",
+      "note": "Airbnb",
+      "url": null
+    }
+  ]
+}
