@@ -57,5 +57,17 @@
       "note": "Airbnb",
       "url": null
     }
+  ],
+  "links": [
+    {
+      "title": "Building a Full-Stack Web App with Next.js 14 & @Supabase — 1080p [4 hours] 2023",
+      "url": "https://www.youtube.com/watch?v=HNXKB2Yn5O0"
+    },{
+      "title": "Building a Front-End Web App with Next.js 14 TailwindLabs — 4K [2 hours] 2024",
+      "url": "https://www.youtube.com/watch?v=j2iWwaPW5OE"
+    },{
+      "title": "API Routes with Next.js 14",
+      "url": "https://www.youtube.com/watch?v=gEB3ckYeZF4"
+    }
   ]
 }
