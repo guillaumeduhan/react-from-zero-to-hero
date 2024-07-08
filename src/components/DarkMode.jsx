@@ -1,8 +1,17 @@
 "use client"
-import { useEffect } from "react";
-import { Moon, Sun } from "./Icons";
 
-export function DarkMode({ dark, setDark }) {
+import { Moon, Sun } from "lucide-react";
+import { useEffect, useState } from 'react';
+import { useLocalStorage } from 'react-use';
+
+export default function DarkMode() {
+  const [dark, setDark] = useState(false);
+  const [value, setValue, remove] = useLocalStorage('dark-mode');
+
+  useEffect(() => {
+    if (value) setDark(value);
+  }, [value]);
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       const root = window.document.documentElement;
@@ -12,11 +21,12 @@ export function DarkMode({ dark, setDark }) {
         root.classList.remove('dark');
       }
     }
+    localStorage.setItem('dark-mode', dark);
   }, [dark]);
 
   return (
     <div className="cursor-pointer" onClick={() => setDark(!dark)}>
-      {dark ? <Sun /> : <Moon />}
+      {dark ? <Sun className="h-[1.2rem] w-[1.2rem]" /> : <Moon className="h-[1.2rem] w-[1.2rem]" />}
     </div>
   );
 }

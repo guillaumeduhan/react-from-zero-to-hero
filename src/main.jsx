@@ -5,9 +5,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import NotFound from "./components/NotFound";
-// import SatoshiLayout from "./layouts/Satoshi";
 import Secret from "./components/Secret";
-import MainLayout from "./layouts/Satoshi";
+import MainLayout from "./layouts/Main";
 import Home from "./routes/Home";
 
 const router = createBrowserRouter([
