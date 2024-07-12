@@ -1,29 +1,18 @@
-"use client"
-
+'use client';
 import { Moon, Sun } from "lucide-react";
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { useLocalStorage } from 'react-use';
 
-export const useDarkMode = () => {
+export default function DarkMode() {
   const [dark, setDark] = useState(false);
+  const [value, setValue, remove] = useLocalStorage('dark-mode', false);
 
   useEffect(() => {
-    const storedDarkMode = localStorage.getItem('dark-mode');
-    if (storedDarkMode) {
-      setDark(storedDarkMode === 'true');
-    }
-  }, []);
+    if (value) setDark(value)
+  }, [value]);
 
   useEffect(() => {
-    localStorage.setItem('dark-mode', dark);
-  }, [dark]);
-
-  return [dark, setDark];
-};
-
-
-export default function DarkMode({ dark, setDark }) {
-  useEffect(() => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       const root = window.document.documentElement;
       if (dark) {
         root.classList.add('dark');
@@ -31,11 +20,10 @@ export default function DarkMode({ dark, setDark }) {
         root.classList.remove('dark');
       }
     }
-  }, [dark]);
+    setValue(dark)
+  }, [dark])
 
-  return (
-    <div className="cursor-pointer" onClick={() => setDark(!dark)}>
-      {dark ? <Sun className="h-[1.2rem] w-[1.2rem]" /> : <Moon className="h-[1.2rem] w-[1.2rem]" />}
-    </div>
-  );
+  return <div className="cursor-pointer" onClick={() => setDark(!dark)}>
+    {dark ? <Sun className="w-8 h-8" /> : <Moon className="w-8 h-8" />}
+  </div>;
 }

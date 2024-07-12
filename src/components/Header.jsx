@@ -1,11 +1,11 @@
-import DarkMode, { useDarkMode } from '@/components/DarkMode';
+import Hamburger from '@/components/Hamburger';
+import DarkMode from '@/components/DarkMode';
 
 export default function Header() {
-  const [dark, setDark] = useDarkMode();
-
   return (
-    <header className="flex items-center justify-end p-4">
-      <DarkMode dark={dark} setDark={setDark} />
+    <header className="flex items-center justify-between p-4">
+      <Hamburger />
+      <DarkMode />
     </header>
   );
 }
