@@ -5,25 +5,16 @@ import { useState } from 'react';
 import config from '../config.json';
 
 export default function HamburgerComponent() {
-  const [open, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState(false);
   const {
     links
   } = config;
 
-
-  return <div>
-    <Hamburger
-      size={24}
-      toggled={open}
-      toggle={setOpen}
-    />
-    {open && <div className="fixed absolute top-0 left-0 w-screen h-screen text-black bg-white dark:bg-slate-900 dark:text-white">
-      <header className="fixed flex items-center justify-start w-full">
-        <Hamburger
-          size={24}
-          toggled={open}
-          toggle={setOpen}
-        />
+  return <div className="z-50">
+    <Hamburger size={18} toggled={isOpen} toggle={setOpen} />
+    {isOpen && <div className="fixed absolute top-0 left-0 w-screen h-screen p-4 text-black bg-white dark:bg-slate-900 dark:text-white">
+      <header className="flex items-center justify-end">
+        <Hamburger className="fixed z-[500]" toggled={isOpen} toggle={setOpen} />
       </header>
       <main className="flex items-center justify-center h-screen text-4xl text-center">
         <List list={links} />

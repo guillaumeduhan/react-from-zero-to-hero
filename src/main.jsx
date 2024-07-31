@@ -1,13 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import * as React from "react";
+import * as ReactDOM from "react-dom/client";
 import {
+  createBrowserRouter,
   RouterProvider,
-  createBrowserRouter
 } from "react-router-dom";
-// import SatoshiLayout from './layouts/SatoshiLayout';
-import MainLayout from '@/layouts/MainLayout';
-import Home from '@/routes/Home';
-import Notfound from '@/routes/Notfound';
+import NotFound from "./components/NotFound";
+import Secret from "./components/Secret";
+import MainLayout from "./layouts/Main";
+import Home from "./routes/Home";
 
 const router = createBrowserRouter([
   {
@@ -17,15 +17,19 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Home />
+      }, {
+        path: "secret",
+        element: <Secret />
       }
     ]
-  }, {
-    path: "*",
-    element: <Notfound />,
   },
+  {
+    path: "*",
+    element: <NotFound />,
+  }
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>

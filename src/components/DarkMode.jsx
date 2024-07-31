@@ -1,18 +1,19 @@
-'use client';
+"use client"
+
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from 'react';
 import { useLocalStorage } from 'react-use';
 
 export default function DarkMode() {
   const [dark, setDark] = useState(false);
-  const [value, setValue, remove] = useLocalStorage('dark-mode', false);
+  const [value, setValue, remove] = useLocalStorage('dark-mode');
 
   useEffect(() => {
-    if (value) setDark(value)
+    if (value) setDark(value);
   }, [value]);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       const root = window.document.documentElement;
       if (dark) {
         root.classList.add('dark');
@@ -20,10 +21,12 @@ export default function DarkMode() {
         root.classList.remove('dark');
       }
     }
-    setValue(dark)
-  }, [dark])
+    localStorage.setItem('dark-mode', dark);
+  }, [dark]);
 
-  return <div className="cursor-pointer" onClick={() => setDark(!dark)}>
-    {dark ? <Sun className="w-8 h-8" /> : <Moon className="w-8 h-8" />}
-  </div>;
+  return (
+    <div className="cursor-pointer" onClick={() => setDark(!dark)}>
+      {dark ? <Sun className="h-[1.2rem] w-[1.2rem]" /> : <Moon className="h-[1.2rem] w-[1.2rem]" />}
+    </div>
+  );
 }
