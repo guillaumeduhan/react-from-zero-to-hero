@@ -8,7 +8,10 @@ body {
   @apply text-black bg-white dark:bg-slate-900 dark:text-white;
   font-family: "Sora", sans-serif;
 }
-
 p {
   @apply font-light text-slate-400;
+}
+
+input {
+  @apply w-full px-2 py-1 border rounded shadow shadow-none;
 }

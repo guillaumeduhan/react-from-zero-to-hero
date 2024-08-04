@@ -4,10 +4,9 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import NotFound from "./components/NotFound";
-import Secret from "./components/Secret";
-import MainLayout from "./layouts/Main";
+import MainLayout from "./layouts/MainLayout";
 import Home from "./routes/Home";
+import NotFound from "./routes/Notfound";
 
 const router = createBrowserRouter([
   {
@@ -17,9 +16,6 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Home />
-      }, {
-        path: "secret",
-        element: <Secret />
       }
     ]
   },
