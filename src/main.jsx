@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import NotFound from "./components/NotFound";
 import Secret from "./components/Secret";
+import { AppWrapper } from "./context";
 import MainLayout from "./layouts/Main";
 import Home from "./routes/Home";
 
@@ -31,6 +32,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AppWrapper>
+      <RouterProvider router={router} />
+    </AppWrapper>
   </React.StrictMode>
-)
+);
