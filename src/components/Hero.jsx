@@ -12,7 +12,7 @@ export default function Hero() {
     verified
   } = config;
 
-  const { user, setUser } = useAppContext();
+  const { user } = useAppContext();
 
   return <div className="grid gap-4 text-left">
     <div className="w-20 h-20 overflow-hidden rounded-full">
