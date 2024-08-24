@@ -8,6 +8,7 @@ import NotFound from "./components/NotFound";
 import Secret from "./components/Secret";
 import { AppWrapper } from "./context";
 import MainLayout from "./layouts/Main";
+import Form from "./routes/Form";
 import Home from "./routes/Home";
 import Search from "./routes/Search";
 
@@ -22,6 +23,9 @@ const router = createBrowserRouter([
       }, {
         path: "search",
         element: <Search />
+      }, {
+        path: "form",
+        element: <Form />
       }, {
         path: "secret",
         element: <Secret />
