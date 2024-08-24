@@ -9,6 +9,7 @@ import Secret from "./components/Secret";
 import { AppWrapper } from "./context";
 import MainLayout from "./layouts/Main";
 import Home from "./routes/Home";
+import Search from "./routes/Search";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,9 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Home />
+      }, {
+        path: "search",
+        element: <Search />
       }, {
         path: "secret",
         element: <Secret />
